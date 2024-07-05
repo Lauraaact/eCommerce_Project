@@ -1,0 +1,42 @@
+[
+    {
+        "nombre" : "Tarta de Manzana",
+        "descripcion" : "La tarta de manzana es un postre clásico que combina la suavidad de las manzanas cocidas con la textura crujiente de la masa quebrada. La mezcla de manzanas jugosas con un toque de canela y azúcar crea un equilibrio perfecto entre dulzura y acidez. Es un postre reconfortante, ideal para disfrutar en cualquier momento del año, especialmente en otoño.",
+        "tiempo" : "55 minutos",
+        "dificultad" : "Fácil",
+        "calorias por porción" : "320 kcal aprox.",
+        "precio" : "50000"
+    },
+    {
+        "nombre" : "Brownies de Chocolate",
+        "descripcion" : "Los brownies de chocolate son un postre irresistible para los amantes del chocolate. Tienen una textura densa y húmeda, con una capa crujiente en la parte superior. La combinación de chocolate negro y mantequilla hace que cada bocado sea rico y decadente. Son perfectos para acompañar con una bola de helado de vainilla o simplemente solos.",
+        "tiempo" : "45 minutos",
+        "dificultad" : "Media",
+        "calorias por porción" : "280 kcal aprox.",
+        "precio" : "55000"
+    },
+    {
+        "nombre" : "Tiramisú",
+        "descripcion" : "El tiramisú es un postre italiano elegante y ligero, conocido por sus capas de bizcochos de soletilla empapados en café y una suave crema de mascarpone. Espolvoreado con cacao en polvo, cada capa ofrece una explosión de sabor a café y un toque de dulzura. Es un postre fresco y cremoso, perfecto para cerrar una comida con estilo.",
+        "tiempo" : "4 horas y 20 minutos",
+        "dificultad" : "Media",
+        "calorias por porción" : "250 kcal aprox.",
+        "precio" : "70000"
+    },
+    {
+        "nombre" : "Cheesecake Frutos Rojos (Tarta de Queso)",
+        "descripcion" : "El cheesecake es un postre cremoso y rico que combina una base de galleta crujiente con una suave mezcla de queso crema. Su textura densa y su sabor ligeramente ácido se equilibran perfectamente con la dulzura de la mermelada de frutas en la parte superior. Es un postre sofisticado que se adapta bien a cualquier ocasión, desde cenas formales hasta reuniones informales.",
+        "tiempo" : "5 horas y 20 minutos",
+        "dificultad" : "Media",
+        "calorias por porción" : "400 kcal aprox.",
+        "precio" : "50000"
+    },
+    {
+        "nombre" : "Flan de Huevo",
+        "descripcion" : "El flan de huevo es un postre tradicional que destaca por su textura suave y sedosa. Hecho a base de leche, huevos y azúcar, tiene un sabor delicado y un toque de vainilla. El caramelo líquido en la base se convierte en una capa dorada y dulce al desmoldar, creando un contraste perfecto con el flan cremoso. Es un postre sencillo pero delicioso que siempre es bien recibido.",
+        "tiempo" : "1 hora y 5 minutos",
+        "dificultad" : "Fácil",
+        "calorias por porción" : "200 kcal aprox.",
+        "precio" : "40000"
+    }
+]
