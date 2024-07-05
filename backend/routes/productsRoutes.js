@@ -7,7 +7,7 @@ import { getProducts , postProduct, deleteProductByID, putProductByID } from '..
 //ROUTER DE EXPRESS
 const productsRouter = express.Router();
 
-//Ruta para peticion GET
+//Ruta para peticion GET 
 productsRouter.get('/obtenerProductos', getProducts);
 
 //Ruta para peticion POST

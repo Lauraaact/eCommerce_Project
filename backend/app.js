@@ -4,6 +4,7 @@
 import express from 'express'; // Importar express
 import dotenv from 'dotenv'; //Importar dotenv
 import connectionMongo from './config/db.js'; // Importar módulo db
+import productsRouter from './routes/productsRoutes.js';//Immportar rutas
 
 // SERVIDOR Y VARIABLES DE ENTORNO
 const app = express(); // Usar express para configurar el servidor 

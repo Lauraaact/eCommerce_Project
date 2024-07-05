@@ -1,7 +1,7 @@
 // CONTROLADOR PRODUCTOS - productsContollers.js
 
 // DEPENDENCIAS Y MÓDULOS
-import { productModel } from '../models/productsModel.js';
+import productModel from '../models/productsModel.js';
 
 //Peticion GET
 export const getProducts = async (req,res) =>{
