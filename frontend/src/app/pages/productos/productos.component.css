@@ -1,0 +1,29 @@
+.pagPrincipal{
+    width: 100%;
+    height: auto;
+    padding: 40px 80px;
+    font-family: var(--textContent);
+    color: var(--colorText)
+}
+.pagPrincipal h2{
+    font-family: var(--textTitle);
+    text-align: center;
+    padding-bottom: 20px;
+}
+.card{
+    border: solid var(--colorEnfasis);
+}
+.btn {
+    color :var(--colorText);
+    font-size: 18px;
+    border-radius: 5px;
+    background-color: #ffff;
+    padding: 7px 20px;
+    text-align: center;
+    border: solid var(--colorEnfasis);
+}
+.btn:hover {
+    background-color: #e91e624f; 
+    color: var(--colorEnfasis);
+    border: solid var(--colorEnfasis);
+}

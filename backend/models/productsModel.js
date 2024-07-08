@@ -13,6 +13,10 @@ const productShema = new schema ({
         type : String, 
         require : true
     },
+    imagen : {
+        type : String, 
+        require : true
+    },
     descripcion : {
         type : String,
         require : true
@@ -22,10 +26,6 @@ const productShema = new schema ({
         require : true
     },
     dificultad : {
-        type : String,
-        require : true
-    },
-    calorias : {
         type : String,
         require : true
     },

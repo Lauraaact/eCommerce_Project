@@ -1,1 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
+/* Archivo raiz (<!DOCTYPE html>)*/
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+:root {
+    /* paleta de colores */
+    --colorClaro1:#FFF3E0;
+    --colorClaro2:#EDE7F6;
+    --colorText:#3E2723;
+    --colorEnfasis:#E91E63;
+    /* Fuentes */
+    --textTitle: "Playfair Display", serif;
+    --textContent:"Raleway", sans-serif;
+}
+/* Condiciones iniciales */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    overflow-x: hidden;
+    overflow-y: scroll;
+    height: auto;
+}

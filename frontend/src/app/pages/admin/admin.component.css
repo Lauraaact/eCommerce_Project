@@ -1,0 +1,9 @@
+main{
+    height: 455px;
+    width: 100%;
+    padding-top: 40px;
+}
+h2{
+    font-family: var(--textTitle);
+    text-align: center;
+}

@@ -1,0 +1,25 @@
+<main class="pagPrincipal">
+    <h2 class="tituloProd">Postres y recetas</h2>
+    <!-- Productos -->
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        @for(producto of allProducts; track $index){
+        <div class="col">
+          <div class="card h-100">
+            <img src="{{producto.imagen}}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{producto.nombre}}</h5>
+                <p class="card-text">{{producto.descripcion}}</p>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">Tiempo :  {{producto.tiempo}}</li>
+                <li class="list-group-item">Dificultad : {{producto.dificultad}}</li>
+                <li class="list-group-item">Precio : ${{producto.precio}}</li>
+            </ul>
+            <div class="card-body">
+                <a routerLink="#"><button class="btn">Comprar</button></a>
+            </div>
+          </div>
+        </div>}
+    </div>
+    <!-- Fin productos -->
+</main>
