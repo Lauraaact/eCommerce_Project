@@ -1,6 +1,113 @@
 <main>
-    <h2>Ingreso administrador</h2>
-    <div class =login>
+    <h2>Administrador</h2>
+    <div *ngIf="nuevoProducto">
+        <h3>Llene el siguiente formulario para agregar el nuevo producto: </h3>
+        <form>
+            <div class="form-group">
+                <label for="nombre">Nombre: </label>
+                <input type="text" id="nombre" name="nombre" placeholder="Ingrese nombre del producto" required [(ngModel)]="producto.nombre"/>
+            </div>
+            <div class="form-group">
+                <label for="imagen">Imagen: </label>
+                <input type="text" id="imagen" name="imagen" placeholder="Ingrese URL de la imagen del producto" required [(ngModel)]="producto.imagen"/>
+            </div>
+            <div class="form-group">
+                <label for="descripcion">Descripción: </label>
+                <input type="text" id="descripcion" name="descripcion" placeholder="Ingrese decripción del producto" required [(ngModel)]="producto.descripcion"/>
+            </div>
+            <div class="form-group">
+                <label for="tiempo">Tiempo: </label>
+                <input type="text" id="tiempo" name="tiempo" placeholder="Ingrese tiempo total de la receta" required [(ngModel)]="producto.tiempo"/>
+            </div>
+            <div class="form-group">
+                <label for="dificultad">Dificultad: </label>
+                <input type="text" id="dificultad" name="dificultad" placeholder="Ingrese dificultad de la receta" required [(ngModel)]="producto.dificultad"/>
+            </div>
+            <div class="form-group">
+                <label for="precio">Precio: </label>
+                <input type="number" id="precio" name="precio" placeholder="Ingrese precio del producto" required [(ngModel)]="producto.precio"/>
+            </div>
+            <div class="btnAgregarProducto">
+                <button type="submit" class="btn" (click)="crear()">Agregar producto</button>
+                <button type="button" class="btn cancelar" (click)="cancelarNuevo()">Cancelar</button>
+            </div>
+        </form>
+    </div>
+    <div *ngIf="!editarProducto && !nuevoProducto">
+        <h3>Productos actuales: </h3>
+        <section class = "cajaProductos">
+            <ol class="list-group list-group-numbered">
+                @for(producto of allProducts; track $index){
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <div class="ms-2 me-auto">
+                        <div class="card mb-3" style="max-width: 900px;">
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img src="{{producto.imagen}}" class="img-fluid rounded-start" alt="...">
+                                </div>
+                                <div class="col-md-5">
+                                    <div class="card-body">
+                                        <div class="fw-bold titulo">{{producto.nombre}}</div>
+                                        <p class="card-text">{{producto.descripcion}}</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="card-body">
+                                        <p class="card-text"><span class="fw-bold">Tiempo: </span>{{producto.tiempo}}</p>
+                                        <p class="card-text"><span class="fw-bold">Dificultad: </span> {{producto.dificultad}}</p>
+                                        <p class="card-text"><span class="fw-bold">Precio: </span> ${{producto.precio}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="btn edit" (click)="editar(producto)">Edit</button>
+                    <button type="button" class="btn borrar" (click)="eliminar(producto._id)"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3-fill" viewBox="0 0 16 16">
+                    <path d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5m-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5M4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06m6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528M8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5"/>
+                    </svg></button>
+                </li>}
+            </ol>
+        </section>
+        <div class="contenedorBtn">
+            <button type="button" class="btn"  (click)="nuevoProductoBtn()">Añadir nuevo producto</button>
+        </div>
+    </div>
+    <div *ngIf="editarProducto">
+        <h3>Edite los campos que desea cambiar: </h3>
+        <form>
+            <div class="form-group">
+                <label for="id">Id: </label>
+                <input type="text" id="id" name="id" readonly [(ngModel)]="producto._id">
+            </div>
+            <div class="form-group">
+                <label for="nombre">Nombre: </label>
+                <input type="text" id="nombre" name="nombre" placeholder="Ingrese nombre del producto" required [(ngModel)]="producto.nombre"/>
+            </div>
+            <div class="form-group">
+                <label for="imagen">Imagen: </label>
+                <input type="text" id="imagen" name="imagen" placeholder="Ingrese URL de la imagen del producto" required [(ngModel)]="producto.imagen"/>
+            </div>
+            <div class="form-group">
+                <label for="descripcion">Descripción: </label>
+                <input type="text" id="descripcion" name="descripcion" placeholder="Ingrese decripción del producto" required [(ngModel)]="producto.descripcion"/>
+            </div>
+            <div class="form-group">
+                <label for="tiempo">Tiempo: </label>
+                <input type="text" id="tiempo" name="tiempo" placeholder="Ingrese tiempo total de la receta" required [(ngModel)]="producto.tiempo"/>
+            </div>
+            <div class="form-group">
+                <label for="dificultad">Dificultad: </label>
+                <input type="text" id="dificultad" name="dificultad" placeholder="Ingrese dificultad de la receta" required [(ngModel)]="producto.dificultad"/>
+            </div>
+            <div class="form-group">
+                <label for="precio">Precio: </label>
+                <input type="number" id="precio" name="precio" placeholder="Ingrese precio del producto" required [(ngModel)]="producto.precio"/>
+            </div>
+            <div class="btnAgregarProducto">
+                <button type="submit" class="btn" (click)="guardar(producto)">Guardar</button>
+                <button type="button" class="btn cancelar" (click)="cancelarEditar()">Cancelar</button>
+            </div>
+        </form>
     </div>
 </main>
 
