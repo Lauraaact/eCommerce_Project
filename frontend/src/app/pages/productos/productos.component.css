@@ -8,16 +8,24 @@
 .pagPrincipal h2{
     font-family: var(--textTitle);
     text-align: center;
+    font-size: 40px;
     padding-bottom: 20px;
 }
+.tituloDesc{
+    font-size: 20px;
+    text-align: center;
+}
 .card{
-    border: solid var(--colorEnfasis);
+    background-color: var(--colorClaro1);
+}
+.list-group-item{
+    background-color: var(--colorClaro1);
 }
 .btn {
-    color :var(--colorText);
+    color :var(--colorEnfasis);
     font-size: 18px;
     border-radius: 5px;
-    background-color: #ffff;
+    background-color:var(--colorClaro1);
     padding: 7px 20px;
     text-align: center;
     border: solid var(--colorEnfasis);

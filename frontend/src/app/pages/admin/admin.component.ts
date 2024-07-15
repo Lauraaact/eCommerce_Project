@@ -92,7 +92,7 @@ export class AdminComponent {
       })
     }
   }
-  
+
   ngOnInit(){
     this.obtenerProductos();
   }
