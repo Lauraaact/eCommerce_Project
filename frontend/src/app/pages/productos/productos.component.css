@@ -8,30 +8,60 @@
 .pagPrincipal h2{
     font-family: var(--textTitle);
     text-align: center;
-    font-size: 40px;
+    font-size: 41px;
     padding-bottom: 20px;
+    color: var(--colorEnfasis);
 }
 .tituloDesc{
     font-size: 20px;
     text-align: center;
+    padding-bottom: 20px;
 }
 .card{
-    background-color: var(--colorClaro1);
+    background-color: #ffffff00;
+    border: solid var(--colorClaro1);
 }
 .list-group-item{
-    background-color: var(--colorClaro1);
+    background-color: #ffffff00;
 }
 .btn {
     color :var(--colorEnfasis);
-    font-size: 18px;
+    font-size: 16px;
     border-radius: 5px;
-    background-color:var(--colorClaro1);
+    background-color:#ffffff00;
     padding: 7px 20px;
     text-align: center;
     border: solid var(--colorEnfasis);
 }
 .btn:hover {
-    background-color: #e91e624f; 
-    color: var(--colorEnfasis);
+    background-color: var(--colorEnfasis); 
+    color: var(--colorClaro1);
     border: solid var(--colorEnfasis);
 }
+.card-title{
+    color: var(--colorEnfasis);
+    display: flex;
+}
+h5 {
+    font-size: 20px;
+}
+.list-group-item{
+    font-size: 16px;
+}
+.tituloCard{
+    padding-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--textTitle);
+    font-weight: bold;
+}
+.list-group-item span{
+    font-weight: bold;
+}
+.compras{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+

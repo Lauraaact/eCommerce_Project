@@ -35,28 +35,20 @@ header{
     gap: 50px;
     list-style: none;
     align-items: center;
+    font-family: var(--textContent);
 }
 .listaMenu a{
     text-decoration: none;
     color: var(--colorText);
     font-family: var(--textContent);
-    font-size: 18px;
-    font-weight: normal;
+    font-size: 16px;
+    font-weight:normal;
+    text-align: center
+}
+.miCuenta {
+    color: var(--colorEnfasis);
     text-align: center
 }
 .listaMenu a:hover{
     color: var(--colorEnfasis);
-}
-.buttonIng {
-    color :var(--colorText);
-    font-size: 18px;
-    border-radius: 5px;
-    background-color: var(--colorClaro1);
-    padding: 7px 20px;
-    text-align: center
-}
-.buttonIng:hover {
-    background-color: #e91e624f; 
-    color: var(--colorEnfasis);
-    border: solid var(--colorEnfasis);
 }

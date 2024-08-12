@@ -8,7 +8,7 @@ const schema = mongoose.Schema;
 
 // ESQUEMAS
 // Estructura información del producto en DB
-const productShema = new schema ({
+const productSchema = new schema ({
     nombre : {
         type : String, 
         require : true
@@ -36,5 +36,5 @@ const productShema = new schema ({
 });
 
 // CREACION MODELO
-const productModel = mongoose.model('productos',productShema);
+const productModel = mongoose.model('productos',productSchema);
 export default productModel; //Exportar modelo

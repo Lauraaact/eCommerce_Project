@@ -1,37 +1,8 @@
 .inicio{
     width: 100%;
+    display: flexbox;
     height: auto;
     font-family: var(--textContent);
-    box-sizing: border-box;
-}
-.beneficios{
-    display: flex;
-    gap: 53px;
-    list-style: none;
-    align-items: center;
-    width: 100%;
-    height: 300px;
-    padding-left: 50px;
-    padding-right: 50px;
-    padding-bottom: 100px;
-    align-content: center;
-}
-.beneficios img{
-    width: 100%;
-    height: 300px;
-    border-radius: 20px;
-}
-.beneficios li{
-    height: 300px;
-    width: 100%;
-    text-align: center;
-    gap: 100px;
-    border-radius: 20px;
-    background-color: #EDE7F6;
-    font-family: var(--textContent);
-}
-.beneficios li:hover{
-    opacity: 0.7;
 }
 .seccion3{
     text-align: center;
@@ -44,14 +15,24 @@ h2{
     padding-top: 50px;
 }
 .seccion2 {
-    height: 500px;
+    height: 100px;
     display: flex;
     gap: 80px;
     justify-content: center;
     align-items: center;
     padding-left: 100px;
     padding-right: 100px;
-    margin-bottom: 50px;
+    margin-bottom: 100px;
+}
+.tituloSeccion2{
+    margin-top: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.tituloSeccion2 h2{
+    color: var(--colorEnfasis);
+    font-size: 41px;
 }
 .imgIntro{
     height: 400px;
@@ -60,20 +41,68 @@ h2{
 }
 .introTxt{
     display: flex;
-    width: 50%;
+    width: 70%;
     height: 100%;
     text-align: center;
     justify-content: center;
     align-items: center;
     font-size: 20px;
 }
+.seccion3{
+    padding-left: 80px;
+    padding-right: 80px;
+}
+.card-text{
+    padding-top: 20px;
+}
+.card-title{
+    font-family: var(--textTitle);
+    color: var(--colorEnfasis);
+    padding-bottom: 20px;
+    font-weight: bold;
+}
+.card{
+    background-color: var(--colorClaro1);
+    border: solid var(--colorClaro1);
+}
+.card-img{
+    opacity: 60%;
+}
 .seccion4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+}
+.beneficios{
+    background-color: var(--colorEnfasis);
+    border-radius: 15px;
+}
+.beneficios-titulo{
+    color: var(--colorClaro1);
+    font-size: 41px;
+    font-weight: normal;
+    padding-bottom: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.beneficios-text{
+    color: var(--colorClaro1);
+    font-size: 20px;
+    padding-left: 20px;
+}
+.seccion5{
     height: 150px;
     width: 100%;
     justify-content: center;
     align-items: center;
     text-decoration: none;
     text-align: center;
+}
+.seccion5 h4{
+    font-size: 26px;
+    font-family: var(--textTitle);
 }
 .marcas{
     list-style: none;
@@ -82,6 +111,9 @@ h2{
     justify-content: center;
     align-items: center;
 }
-.seccion4 img{
+.seccion5 img{
     width: 70px;
+}
+carousel-caption p{
+    font-size: 16px;
 }

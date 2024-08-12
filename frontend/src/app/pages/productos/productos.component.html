@@ -8,16 +8,16 @@
           <div class="card h-100">
             <img src="{{producto.imagen}}" class="card-img-top" alt="...">
             <div class="card-body">
-                <h5 class="card-title">{{producto.nombre}}</h5>
+                <div class="tituloCard"><h5 class="card-title">{{producto.nombre}}</h5></div>
                 <p class="card-text">{{producto.descripcion}}</p>
             </div>
             <ul class="list-group list-group-flush">
-                <li class="list-group-item">Tiempo :  {{producto.tiempo}}</li>
-                <li class="list-group-item">Dificultad : {{producto.dificultad}}</li>
-                <li class="list-group-item">Precio : ${{producto.precio}}</li>
+                <li class="list-group-item"><span>Tiempo :</span> {{producto.tiempo}}</li>
+                <li class="list-group-item"><span>Dificultad :</span> {{producto.dificultad}}</li>
+                <li class="list-group-item"><span>Precio :</span> ${{producto.precio}}</li>
             </ul>
-            <div class="card-body">
-                <a routerLink="#"><button class="btn">Comprar</button></a>
+            <div class="card-body compras">
+                <a routerLink="#"><button class="btn">Agregar a la bolsa</button></a>
             </div>
           </div>
         </div>}
