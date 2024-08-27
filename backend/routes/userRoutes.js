@@ -10,7 +10,7 @@ const userRouter = Router();
 
 //Ruta para peticion GET 
 userRouter.get('/:_id', auth(), getUserById); //Solo un usuario
-userRouter.get('/', auth(), getUsers); //Todos los usuarios
+userRouter.get('/', auth('admin'), getUsers); //Todos los usuarios
 
 //Ruta para peticion POST
 userRouter.post('/', postUser);

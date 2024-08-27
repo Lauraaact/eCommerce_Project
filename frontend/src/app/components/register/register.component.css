@@ -62,3 +62,8 @@ a {
     box-shadow: 0 0 5px var(--colorEnfasis);
 }
 
+.form-check-input:checked {
+    background-color: var(--colorEnfasis);
+    border-color: var(--colorEnfasis);
+  }
+

@@ -11,27 +11,35 @@ const schema = mongoose.Schema;
 const productSchema = new schema ({
     nombre : {
         type : String, 
-        require : true
+        required : true
     },
     imagen : {
         type : String, 
-        require : true
+        required : true
     },
     descripcion : {
         type : String,
-        require : true
+        required : true
     },
     tiempo : {
         type : String,
-        require : true
+        required : true
     },
     dificultad : {
         type : String,
-        require : true
+        required : true
     },
     precio : {
         type : Number,
-        require : true
+        required : true
+    },
+    alergenos : {
+        type : String,
+        required : true
+    },
+    ingredientes : {
+        type : Array,
+        required : true
     }
 });
 

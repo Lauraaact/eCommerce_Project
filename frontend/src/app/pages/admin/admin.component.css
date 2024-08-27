@@ -4,11 +4,12 @@ main{
     padding-left: 50px;
     padding-right: 50px;
     font-family: var(--textContent);
+    margin-left: 25vw;
 }
 h2{
     font-family: var(--textTitle);
     text-align: center;
-    font-size: 40px;
+    font-size: 35px;
 }
 h3{
     margin-top: 20px;
@@ -29,16 +30,16 @@ h3{
 }
 .btn {
     color :var(--colorEnfasis);
-    font-size: 18px;
+    font-size: 16px;
     border-radius: 5px;
-    background-color: #ffff;
+    background-color:#ffffff00;
     padding: 7px 20px;
     text-align: center;
     border: solid var(--colorEnfasis);
 }
 .btn:hover {
-    background-color: #e91e624f; 
-    color: var(--colorEnfasis);
+    background-color: var(--colorEnfasis); 
+    color: var(--colorClaro1);
     border: solid var(--colorEnfasis);
 }
 .borrar{
@@ -77,4 +78,73 @@ h3{
     border-color: var(--colorEnfasis);
     outline: none;
     box-shadow: 0 0 5px var(--colorEnfasis);
+}
+
+
+.navAdmin{
+    width: 25vw;
+    height: 100vh;
+    background-color: var(--colorClaro1);
+    font-family: var(--textContent);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 16px;
+    align-items: center;
+    text-align: center;
+}
+.navAdmin div p {
+    font-size: 14px;
+    color: var(--colorEnfasis)
+}
+.navAdmin div h5 {
+    font-size: 26px;
+    margin-bottom: 5px;
+    color: var(--colorText);
+    font-family: var(--textTitle);
+}
+.listaMenu {
+    list-style: none;
+    padding: 0;
+}
+
+.listaMenu > li {
+    margin-bottom: 15px;
+    cursor: pointer;
+    position: relative;
+}
+
+.listaMenu > li:hover {
+    background-color: var(--colorEnfasis); /* Fondo más claro al pasar el mouse */
+    padding: 10px; /* Añadir un padding para destacar el elemento */
+    transition: 0.3s;
+}
+
+/* Logo */
+.logo {
+    text-align: center;
+    margin-top: 20px;
+}
+.img-logo {
+    width: 100px;
+    height: auto;
+    transition: transform 0.3s;
+}
+.img-logo:hover {
+    transform: scale(1.1);
+}
+
+.inicioAdmin {
+    width: 100%;
+    height: 80vh;
+    display: flex; /* Alineación central opcional */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    overflow: hidden; 
+}
+.bienvenido{
+    height: 100%;
+    width: 100%;
+    object-fit:cover;
 }

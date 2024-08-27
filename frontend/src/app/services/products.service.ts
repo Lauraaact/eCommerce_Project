@@ -20,26 +20,30 @@ export class ProductsService {
     return this.httpClient.get(this.API_URL_GET);
   }
   //CREAR DATOS
-  postProducts(nombre:string, imagen:string, descripcion:string, tiempo:string, dificultad:string,precio:number){
+  postProducts(nombre:string, imagen:string, descripcion:string, tiempo:string, dificultad:string,precio:number, alergenos:string, ingredientes:Array<string>){
     const infoProductos ={
       nombre:nombre,
       imagen:imagen,
       descripcion:descripcion,
       tiempo:tiempo,
       dificultad:dificultad,
-      precio:precio
+      precio:precio,
+      alergenos:alergenos,
+      ingredientes:ingredientes
     }
     return this.httpClient.post(this.API_URL_POST, infoProductos);
   }
   //MODIFICAR DATOS
-  putProduct(nombre:string, imagen:string, descripcion:string, tiempo:string, dificultad:string, precio:number, id:string){
+  putProduct(nombre:string, imagen:string, descripcion:string, tiempo:string, dificultad:string, precio:number, alergenos:string, ingredientes:Array<string>, id:string){
     const infoProductos ={
       nombre:nombre,
       imagen:imagen,
       descripcion:descripcion,
       tiempo:tiempo,
       dificultad:dificultad,
-      precio:precio
+      precio:precio,
+      alergenos:alergenos,
+      ingredientes:ingredientes
     }
     return this.httpClient.put(`${this.API_URL_PUT}/${id}`, infoProductos);
   }

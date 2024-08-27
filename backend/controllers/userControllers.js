@@ -26,11 +26,19 @@ export const postUser  = async (req,res) => { //asyncronica porque debe esperar 
             datos : newUser
         });
     }catch(error){
-        return res.status(400).json({
-            estado : '400',
-            msg : 'Ocurrio un problema al crear un usuario',
-            datos : error
-        });
+        if (error.code === 11000) { // Código de error de duplicado en MongoDB
+            return res.status(400).json({
+                estado: '400',
+                msg: 'El correo ya se encuentra registrado',
+                datos: error
+            });
+        } else {
+            return res.status(400).json({
+                estado: '400',
+                msg: 'Ocurrió un problema al crear el usuario',
+                datos: error
+            });
+        }
     }
 }
 

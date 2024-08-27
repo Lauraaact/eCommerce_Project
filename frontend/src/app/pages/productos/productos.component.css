@@ -1,7 +1,6 @@
 .pagPrincipal{
     width: 100%;
     height: auto;
-    padding: 40px 80px;
     font-family: var(--textContent);
     color: var(--colorText)
 }
@@ -64,4 +63,14 @@ h5 {
     align-items: center;
     justify-content: center;
 }
-
+.producto{
+    font-family: var(--textTitle);
+    font-size: 41px;
+}
+.productoCard:hover{
+    cursor: pointer;
+    /* Agranda la card un poco */
+    transform: scale(1.05);
+    /* Agrega una sombra para darle un efecto más destacado */
+    box-shadow: 0 4px 8px var(--colorEnfasis);
+}

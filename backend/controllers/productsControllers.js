@@ -18,8 +18,8 @@ export const getProducts = async (req,res) =>{
 
 //Petición POST
 export const postProduct  = async (req,res) => {
-    const {nombre, imagen, descripcion, tiempo, dificultad, precio} = req.body;
-    if (!nombre || !imagen || !descripcion || !tiempo || !dificultad|| !precio){
+    const {nombre, imagen, descripcion, tiempo, dificultad, precio, alergenos, ingredientes} = req.body;
+    if (!nombre || !imagen || !descripcion || !tiempo || !dificultad|| !precio ||!alergenos ||!ingredientes){
         return res.status(400).json({message : 'Debe ingresar todos los campos requeridos'});
     }
     try{

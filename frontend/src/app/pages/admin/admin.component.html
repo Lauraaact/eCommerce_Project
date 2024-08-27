@@ -1,5 +1,33 @@
+<div style="display: flex;">
+    <div style="position: fixed;">
+        <nav class="navAdmin">
+            <div class="logo" (click)="bienvenido()">
+                <img class="img-logo" src="./assets/U.png" alt="logo">
+            </div>
+            <div>
+                <h5 class="tituloNav">Centro de administración</h5>
+                <p>Bienvenido, administrador</p>
+            </div>
+            <ul class="listaMenu">
+                <li (click)="gestionProductos()">Gestión de productos</li>
+                <li>Gestión de administradores
+                </li>
+                <li>Gestion de usuarios
+                </li>
+                <li (click)="soporteAyuda()">Soporte y ayuda
+                </li>
+            </ul>
+            <div>
+                <button class="btn">Cerrar sesión</button>
+            </div>
+        </nav>
+    </div>
 <main>
-    <h2>Administrador</h2>
+    <!--PAG. INICIO-->
+    <div class="inicioAdmin" *ngIf="inicio">
+        <img src="/assets/admin.png" class="bienvenido" >
+    </div>
+    <!--Nuevo Producto-->
     <div *ngIf="nuevoProducto">
         <h3>Llene el siguiente formulario para agregar el nuevo producto: </h3>
         <form>
@@ -33,7 +61,12 @@
             </div>
         </form>
     </div>
-    <div *ngIf="!editarProducto && !nuevoProducto">
+    <!--PAG. GESTIÓN DE PRODUCTOS-->
+    <div *ngIf="productosActuales">
+        <h2>Gestión de productos</h2>
+        <div class="contenedorBtn">
+            <button type="button" class="btn"  (click)="nuevoProductoBtn()">Añadir nuevo producto</button>
+        </div>
         <h3>Productos actuales: </h3>
         <section class = "cajaProductos">
             <ol class="list-group list-group-numbered">
@@ -68,10 +101,8 @@
                 </li>}
             </ol>
         </section>
-        <div class="contenedorBtn">
-            <button type="button" class="btn"  (click)="nuevoProductoBtn()">Añadir nuevo producto</button>
-        </div>
     </div>
+    <!--Editar Producto-->
     <div *ngIf="editarProducto">
         <h3>Edite los campos que desea cambiar: </h3>
         <form>
@@ -109,5 +140,10 @@
             </div>
         </form>
     </div>
+    <!--PAG. SOPORTE-->
+    <div class="inicioAdmin" *ngIf="soporte">
+        <img src="/assets/soporte.png" class="bienvenido" >
+    </div>
 </main>
+</div>
 
