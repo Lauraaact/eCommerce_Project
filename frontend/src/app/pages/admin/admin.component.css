@@ -105,6 +105,7 @@ h3{
     font-family: var(--textTitle);
 }
 .listaMenu {
+    text-align: left;
     list-style: none;
     padding: 0;
 }
@@ -116,7 +117,8 @@ h3{
 }
 
 .listaMenu > li:hover {
-    background-color: var(--colorEnfasis); /* Fondo más claro al pasar el mouse */
+    background-color: var(--colorEnfasis);
+    color: var(--colorClaro1);
     padding: 10px; /* Añadir un padding para destacar el elemento */
     transition: 0.3s;
 }

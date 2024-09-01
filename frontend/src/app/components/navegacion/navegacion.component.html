@@ -16,7 +16,7 @@
       </button></a>
       <app-ordenes></app-ordenes>
       </li>
-      <li class="nav-item dropdown">
+      <li class="nav-item dropdown" (click)="knowLogin()">
         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
           <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
             <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
@@ -24,10 +24,20 @@
           </svg>
         </a>
         <ul class="dropdown-menu miCuenta">
-          Mi cuenta
+          <div *ngIf="isLogged">
+            Hola, {{user.nombreUsuario}}
+          </div>
+          <div *ngIf="!isLogged">
+            Bienvenido
+          </div>
           <li><hr class="dropdown-divider"></li>
-          <li><a class="dropdown-item desplegable" (click)="toggleLogin()">Iniciar sesión</a></li>
-          <li><a class="dropdown-item desplegable" (click)="toggleRegister()">Registarse</a></li>
+          <div *ngIf="!isLogged">
+            <li><a class="dropdown-item desplegable" (click)="toggleLogin()">Iniciar sesión</a></li>
+            <li><a class="dropdown-item desplegable" (click)="toggleRegister()">Registarse</a></li>
+          </div>
+          <div *ngIf="isLogged">
+            <li><a class="dropdown-item desplegable" (click)="closeService()">Cerrar sesión</a></li>
+          </div>
         </ul>
       </li>
   </ul>

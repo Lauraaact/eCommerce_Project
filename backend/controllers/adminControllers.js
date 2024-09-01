@@ -47,10 +47,7 @@ export const getAdmin = async (req,res) =>{
                 datos : null
             });
         }
-        return res.status(200).send({
-            estado : '200',
-            administradores : admins
-        });
+        return res.status(200).send(admins);
     } catch (error){
         return res.status(400).json({
             estado : '400',

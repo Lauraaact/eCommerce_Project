@@ -53,10 +53,7 @@ export const getUsers = async (req,res) =>{
                 datos : null
             });
         }
-        return res.status(200).send({
-            estado : '200',
-            usuarios : users
-        });
+        return res.status(200).send(users);
     } catch (error){
         return res.status(400).json({
             estado : '400',
@@ -80,7 +77,7 @@ export const getUserById = async (req,res) =>{
         }
         return res.status(200).json({
             estado : '200',
-            user : userById
+            user : userById,
         });
     }catch(error){
         return res.status(400).json({

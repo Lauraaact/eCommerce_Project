@@ -7,7 +7,7 @@
         </div>
         <div class="modal-body">
           <div class="div-img-logo"><img class="img-logo" src="./assets/UfondoBlanco.png" alt="logo"></div>
-          <form class="mx-1 mx-md-4">
+          <form [formGroup]="credentialForm" (ngSubmit)="handleSubmit()" class="mx-1 mx-md-4">
             <div class="mb-4">
               <p>Ingrese con su correo y contraseña:</p>
             </div>
@@ -15,20 +15,21 @@
             <div class="d-flex flex-row align-items-center mb-4">
               <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
               <div data-mdb-input-init class="form-outline flex-fill mb-0 form-group">
-                <input type="email" name="correo" id="form3Example3c" class="form-control" placeholder="Ej.: ejemplo@mail.com" required/>
+                <input type="email" name="correo" id="form3Example3c" class="form-control" placeholder="Ej.: ejemplo@mail.com" formControlName="email" required/>
+                <div *ngIf="!credentialForm.value.email && submited" class="alert alert-danger">
+                  El correo es requerido.
+                </div>
               </div>
             </div>
             <!--CONTRASEÑA-->
             <div class="d-flex flex-row align-items-center mb-4">
               <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
               <div data-mdb-input-init class="form-outline flex-fill mb-0 form-group">
-                <input type="password" name="contrasena" id="form3Example4c" class="form-control"  placeholder="Ingrese su contraseña" required/>
+                <input type="password" name="contrasena" id="form3Example4c" class="form-control"  placeholder="Ingrese su contraseña" formControlName="password" required/>
+                <div *ngIf="!credentialForm.value.password && submited" class="alert alert-danger">
+                  La contraseña es requerida.
+                </div>
               </div>
-            </div>
-            <!--Olvidar contraseña-->
-            <div class="mb-4 caja-olvido-contra">
-              <!-- Simple link -->
-              <a href="#!" class="olvido-contra">Olvide mi contraseña</a>
             </div>
             <!--Boton de enviar-->
             <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">

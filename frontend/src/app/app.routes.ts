@@ -10,9 +10,7 @@ import { authGuard } from './guards/auth.guard';
 export const routes: Routes = [
     {path : 'inicio', component : InicioComponent, title: 'uBaker | Inicio'}, 
     {path : 'productos', component : ProductosComponent, title: 'uBaker | Catálogo'},
-    {path : 'admin', component : AdminComponent, title: 'uBaker | Admin', 
-        //canActivate: [authGuard]
-    },
+    {path : 'admin', component : AdminComponent, title: 'uBaker | Admin', canActivate: [authGuard]},
     {path : '', redirectTo : '/inicio', pathMatch : 'full'},//si no hay nada redirecciona a inicio
     {path : '**', component : NoEncontradoComponent}//Si no existe la ruta va a no encontrado
 ];

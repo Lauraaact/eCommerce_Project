@@ -2,15 +2,53 @@
     .h-custom {
     height: 100vh !important;
     }
-    }
+}
     
-    .card-registration .select-input.form-control[readonly]:not([disabled]) {
+.card-registration .select-input.form-control[readonly]:not([disabled]) {
     font-size: 1rem;
     line-height: 2.15;
     padding-left: .75em;
     padding-right: .75em;
-    }
+}
     
-    .card-registration .select-arrow {
+.card-registration .select-arrow {
     top: 13px;
-    }
+}
+
+.btn {
+    color :var(--colorEnfasis);
+    font-size: 16px;
+    border-radius: 5px;
+    background-color:#ffffff00;
+    padding: 7px 20px;
+    text-align: center;
+    border: solid var(--colorEnfasis);
+}
+.btn:hover {
+    background-color: var(--colorEnfasis); 
+    color: var(--colorClaro1);
+    border: solid var(--colorEnfasis);
+}
+
+.carritoVacio{
+    width: 100%;
+    height: 90vh;
+}
+.carritoVacio img{
+    width: 50%;
+}
+.msgVacio{
+    width: 100%;
+    height: 50%;
+    display:flex;
+    align-items: end;
+    justify-content: center;
+    padding-bottom: 50px;
+}
+.imgVacio{
+    width: 100%;
+    height: 50%;
+    display:flex;
+    align-items:start;
+    justify-content: center;
+}

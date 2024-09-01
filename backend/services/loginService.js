@@ -9,15 +9,15 @@ import { generateToken } from "../lib/jwt.js";
 
 const loginService = async(req, res) =>{
     try {
-            //credenciales del formulario y se verifica en la bd
-    const {email, password} =req.body;
-    // buscar si existe el email
-    const userFound = await userModel.findOne({
+        //credenciales del formulario y se verifica en la bd
+        const {email, password} =req.body;
+        // buscar si existe el email
+        const userFound = await userModel.findOne({
         correo : email
     })
     if (!userFound){
         return res.status(404).json({
-            mensaje: 'Usuario no encontrado, por favor registrase'
+            msg: 'Usuario no encontrado, por favor registrase'
         })
     }
     // comparar password con contraseña guardada
@@ -45,7 +45,8 @@ const loginService = async(req, res) =>{
     return res.status(200).json({
         estado: '200',
         msg : 'Inicio de sesión exitoso',
-        tokenGenerado : token
+        tokenGenerado : token,
+        id: userFound._id,
     })
     } catch (error) {
         return res.status(400).json({

@@ -14,8 +14,8 @@ export class LoginService {
   private API_URL = 'http://localhost:3000/login'
 
   //Validar credenciales Post
-  login(credeciales: Credentials){
-    return this.httpClient.post(this.API_URL, credeciales)
+  login(credenciales: Credentials){
+    return this.httpClient.post(this.API_URL, credenciales)
   }
   //Aceder y guardar token
   getToken(){
@@ -45,6 +45,7 @@ export class LoginService {
   }
   logout(){
     localStorage.removeItem('token');
+    localStorage.removeItem('id');
     this.router.navigate(['/'])
   }
 

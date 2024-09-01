@@ -1,8 +1,9 @@
 import { Component, inject } from '@angular/core';
-import { ProductsService } from '../../services/products.service';
-import { CommonModule } from '@angular/common';
-import { NavegacionComponent } from '../../components/navegacion/navegacion.component';
-import { FooterComponent } from '../../components/footer/footer.component';
+import { ProductsService } from '../../services/products.service'; //Productos
+import { CommonModule } from '@angular/common'; //Condicionales
+import { NavegacionComponent } from '../../components/navegacion/navegacion.component'; //Menú nav.
+import { FooterComponent } from '../../components/footer/footer.component'; // Footer
+import { CarritoService } from '../../services/carrito.service'; //Carrito de compras
 
 @Component({
   selector: 'app-productos',
@@ -17,7 +18,8 @@ import { FooterComponent } from '../../components/footer/footer.component';
 })
 export class ProductosComponent {
 
-  productService = inject(ProductsService);
+  carritoService = inject (CarritoService);
+  productService = inject (ProductsService);
   allProducts : any[] = [];
   ingrediente : string[] = [];
   productoEspecifico : boolean = false;
@@ -60,6 +62,9 @@ export class ProductosComponent {
       top: 0,
       behavior: 'smooth'
     });
+  }
+  anadirCarrito(producto:any){
+    this.carritoService.agregarProducto(producto);
   }
 
   ngOnInit(){

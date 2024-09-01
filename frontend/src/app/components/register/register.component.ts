@@ -4,8 +4,7 @@ import { UserService } from '../../services/user.service';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router'; //Redireccionamiento
-import { Notyf } from 'notyf';
-import { NOTYF } from '../../notyf.token';
+import { NOTYF } from '../../notyf.token'; //Alerts y notif.
 
 declare var bootstrap: any;
 
