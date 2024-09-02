@@ -12,12 +12,12 @@ const productsRouter = express.Router();
 productsRouter.get('/obtenerProductos', getProducts);
 
 //Ruta para peticion POST
-productsRouter.post('/registrarProducto',auth('admin'), postProduct);
+productsRouter.post('/registrarProducto', auth('admin'), postProduct);
 
 //Ruta para peticion DELETE
-productsRouter.delete('/eliminarProducto/:_id',auth('admin'), deleteProductByID);
+productsRouter.delete('/eliminarProducto/:_id', auth('admin'), deleteProductByID);
 
 //Ruta para peticion PUT
-productsRouter.put('/actualizarProducto/:_id',auth('admin'), putProductByID);
+productsRouter.put('/actualizarProducto/:_id',auth('admin'),  putProductByID);
 
 export default productsRouter;
