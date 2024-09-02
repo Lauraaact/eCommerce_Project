@@ -52,3 +52,23 @@
     align-items:start;
     justify-content: center;
 }
+.btn {
+    font-size: 16px;
+    color :var(--colorEnfasis);
+    border-radius: 5px;
+    background-color: #FFFF;
+    padding: 7px 20px;
+    text-align: center;
+    border: solid var(--colorEnfasis);
+}
+.btn:hover {
+    background-color: var(--colorEnfasis); 
+    color: var(--colorClaro1);
+    border: solid var(--colorEnfasis);
+}
+@media (max-width: 768px) {
+    .img-fluid {
+        max-width: 50px;
+        height: auto;
+    }
+}

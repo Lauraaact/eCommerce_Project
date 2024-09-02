@@ -257,5 +257,6 @@ export class AdminComponent {
     this.obtenerUsuarios();
     this.obtenerAdmins();
   }
+
   
 }

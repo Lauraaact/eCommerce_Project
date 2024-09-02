@@ -1,12 +1,15 @@
 import { Component, inject } from '@angular/core';
 import { CarritoService } from '../../services/carrito.service'; //Carrito
 import { CommonModule } from '@angular/common';//Condicionales
-import { LoginService } from '../../services/login.service';
+import { LoginService } from '../../services/login.service'; //Login service
+import { LoginComponent } from '../login/login.component'; //Login
+
+declare var bootstrap: any;
 
 @Component({
   selector: 'app-ordenes',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, LoginComponent],
   templateUrl: './ordenes.component.html',
   styleUrl: './ordenes.component.css'
 })
@@ -47,6 +50,11 @@ export class OrdenesComponent {
 
   actualizarTotal() {
     this.total = this.carritoService.totalCarrito();
+  }
+  modalInicio(){
+    const modalElement = document.getElementById('loginModal');
+    const modal = new bootstrap.Modal(modalElement);
+    modal.show();
   }
 
   ngOnInit() {

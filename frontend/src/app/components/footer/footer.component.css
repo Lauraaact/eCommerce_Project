@@ -36,3 +36,8 @@ footer{
     align-items: center;
     justify-content: center;
 }
+@media (max-width: 768px){
+    .menuFooter{
+        font-size: 11px;
+    }
+}

@@ -1,6 +1,6 @@
 <app-navegacion></app-navegacion>
 <main class="pagPrincipal">
-    <div *ngIf="!productoEspecifico" style="padding: 40px 80px;">
+    <div *ngIf="!productoEspecifico" class="pagina">
         <h2 class="tituloProd">Postres y recetas</h2>
         <p class="tituloDesc">Conoce nuestros productos, recetas y postres para todos los gustos.</p>
         <!-- Productos -->
@@ -10,7 +10,7 @@
             <div class="card h-100 productoCard">
                 <div (click)="especifico(producto)">
                     <img src="{{producto.imagen}}" class="card-img-top" alt="..." style="height: 200px; object-fit: cover;">
-                    <div class="card-body" style="height: 220px;">
+                    <div class="card-body especifico">
                         <div class="tituloCard"><h5 class="card-title">{{producto.nombre}}</h5></div>
                         <p class="card-text">{{producto.descripcion}}</p>
                     </div>
@@ -23,7 +23,7 @@
         </div>
         <!-- Fin productos -->
     </div>
-    <div style="display: flex; padding: 0px 80px; padding-bottom: 20px; background-color: var(--colorClaro1);" *ngIf="productoEspecifico">
+    <div class="cardEspecifico" *ngIf="productoEspecifico">
         <div style="padding: 30px;">
             <button style="position: fixed; border: none;" (click)="principal()">
                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-left-circle-fill" viewBox="0 0 16 16">
@@ -31,26 +31,27 @@
                 </svg>
             </button>
         </div>
-        <div class="card" style="background-color: #fff;">
+        <div class="card especifica" style="background-color: #fff;">
             <img src="{{producto.imagen}}" class="card-img-top" alt="..." style="height: 300px; object-fit: cover;">
             <div class="card-body">
                 <div class="tituloCard"><h5 class="card-title producto">{{producto.nombre}}</h5></div>
                 <div style="padding-right: 10%; padding-left: 10%;">{{producto.descripcion}}</div>
             </div>
-            <div style="display: flex; align-items: center;">
-                <div style="width: 70%;">
-                <p class="card-text" style="padding: 20px">
+            <div class="contenidoEspecifico">
+                <div class="izq">
+                <p class="card-text alergenos" style="padding-left: 20px;">
                     <span style="font-weight: bold;">Alergenos :</span>
                     {{producto.alergenos}}
                 </p>
-                <p class="card-text" style="padding-left: 20px;">
+                <p class="card-text ingredientes" style="padding-left: 20px;">
                     <span style="font-weight: bold;">Ingredientes :</span>
                 </p>
-                <ul style="padding-left: 50px;">
+                <ul class="listIngredientes">
                 @for(ingrediente of producto.ingredientes; track $index) {
                     <li>{{ ingrediente }}</li>
                 }</ul></div>
-                <ul class="list-group list-group-flush" style="width: 30%;">
+
+                <ul class="list-group list-group-flush der">
                     <li class="list-group-item"><span>Tiempo :</span> {{producto.tiempo}}</li>
                     <li class="list-group-item"><span>Dificultad :</span> {{producto.dificultad}}</li>
                     <li class="list-group-item"><span>Precio :</span> ${{producto.precio}}</li>

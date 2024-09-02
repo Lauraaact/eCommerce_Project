@@ -4,6 +4,9 @@
     font-family: var(--textContent);
     color: var(--colorText)
 }
+.pagina{
+    padding: 40px 80px;
+}
 .pagPrincipal h2{
     font-family: var(--textTitle);
     text-align: center;
@@ -73,4 +76,50 @@ h5 {
     transform: scale(1.05);
     /* Agrega una sombra para darle un efecto más destacado */
     box-shadow: 0 4px 8px var(--colorEnfasis);
+}
+.card-body especifico{
+    height: 500px;
+}
+.cardEspecifico{
+    display: flex; 
+    padding: 0px 80px; 
+    padding-bottom: 20px; 
+    background-color: var(--colorClaro1);
+}
+.contenidoEspecifico{
+    display: flex; 
+    align-items: center;
+}
+.izq {
+    width: 70%;
+}
+.list-group list-group-flush der{
+    width: 30%;
+}
+
+.listIngredientes{
+    padding-left: 50px;
+}
+
+@media (max-width: 768px){
+    .pagina{
+        padding: 10px 30px;
+    }
+    .cardEspecifico{
+        padding-left: 0;
+        padding-right: 30px;
+    }
+    .bodyEspecifico{
+        display: flex;
+    }
+    .contenidoEspecifico{
+        display: flex; 
+        align-items: center;
+    }
+    .izq {
+        width: 60%;
+    }
+    .list-group list-group-flush der{
+        width: 40%;
+    }
 }
