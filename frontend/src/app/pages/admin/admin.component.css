@@ -89,11 +89,10 @@ h3{
     padding: 15px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     font-size: 16px;
     align-items: center;
     text-align: center;
-    position: relative;
 }
 .navAdmin div p {
     font-size: 14px;
@@ -147,57 +146,35 @@ h3{
     overflow: hidden; 
 }
 .bienvenido{
-    height: 100%;
     width: 100%;
-    object-fit:cover;
+    object-fit:fill;
+    height: auto;
 }
 
-/* Estilos del botón de hamburguesa */
-.menu-toggle {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-    position: absolute;
-    top: 15px;
-    right: 15px;
-}
-
-.menu-toggle span {
-    width: 25px;
-    height: 3px;
-    background-color: var(--colorText);
-    margin: 4px 0;
-    transition: all 0.3s ease;
-}
 
 @media (max-width: 768px) {
-    .navAdmin {
-        width: 100vw;
-        height: auto;
-        padding: 15px;
-    }
 
-    .listaMenu {
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        left: -100%;
+    main{
         width: 100%;
-        background-color: var(--colorClaro1);
-        transition: all 0.3s ease;
-        z-index: 1000;
+        padding-top: 30px;
+        padding-left: 30px;
+        padding-right: 30px;
+        margin-left: 25vw;
     }
-
-    .listaMenu.show {
-        left: 0;
+    .navAdmin{
+        padding: 0;
+        width: auto;
     }
-
-    .menu-toggle {
-        display: flex;
+    .img-logo{
+        width: 20vw;
     }
-
-    .logo {
-        text-align: left;
-        margin-top: 0;
+    .prueba{
+        flex-wrap: nowrap;
+    }
+    .container-fluid{
+        width: auto;
+    }
+    .d-flex {
+        display: block !important;
     }
 }

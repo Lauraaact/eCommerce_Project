@@ -32,6 +32,7 @@ export class AdminComponent {
   allAdmins : any[] = [];
   //Token
   token : any = this.loginService.getToken();
+  id : any = localStorage.getItem('id');
   //Declaración pags.
   nuevoProducto : boolean = false;
   editarProducto : boolean = false;
@@ -191,6 +192,17 @@ export class AdminComponent {
 
   //USERS
   //Get
+  obtenerUsuario(){
+    this.userService.getUser(this.id,this.token).subscribe((res:any)=>{
+      if(res){
+        console.log(res);
+        this.user = res.user;
+        console.log(this.user)
+      }else{
+        console.error('Error');
+      }
+    });
+  }
   obtenerUsuarios(){
     this.userService.getUsers(this.token).subscribe({
       next: (res: any) => {
@@ -256,6 +268,7 @@ export class AdminComponent {
     this.obtenerProductos();
     this.obtenerUsuarios();
     this.obtenerAdmins();
+    this.obtenerUsuario()
   }
 
   
